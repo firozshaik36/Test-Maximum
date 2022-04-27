@@ -56,6 +56,25 @@ public class MaximumNumber {
             logger.info("The maximum number is: " + maximumNumber);
         }
 
+        //This Method is For to test maximumString
+        public static void findMaximum(String firstString, String secondString, String thirdString) {
+            String maximumString;
+
+            if(firstString.compareTo(secondString)>0 && firstString.compareTo(thirdString)>0) {
+                maximumString = firstString;
+            }
+            else if(secondString.compareTo(firstString)>0 && secondString.compareTo(thirdString)>0) {
+                maximumString = secondString;
+            }
+            else {
+                maximumString = thirdString;
+            }
+
+            logger.info("The maximum String is: " + maximumString);
+        }
+
+
+
 
     public static void main(String[] args) {
 
@@ -63,11 +82,14 @@ public class MaximumNumber {
 
         logger.info("---Given Three Numbers and Finding The Maximum---");
 
-        Integer firstNumber = 15, secondNumber = 20, thirdNumber = 25;
+        Integer firstNumber = 44, secondNumber = 20, thirdNumber = 65;
         findMaximum(firstNumber, secondNumber, thirdNumber);
 
         Float number1 = 36f, number2 = 10f, number3 = 5f;
         findMaximum(number1, number2, number3);
+
+        String firstString = "Apple", secondString = "Peach", thirdString = "Banana";
+        findMaximum(firstString, secondString, thirdString);
 
     }
 
