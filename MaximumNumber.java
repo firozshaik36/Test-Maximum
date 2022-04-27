@@ -39,16 +39,35 @@ public class MaximumNumber {
 
         logger.info("The Maximum Number Is: " + maximumNumber);
     }
+        //This Method is For to test maximumNumber For Float
+        public static void findMaximum(Float firstNumber, Float secondNumber, Float thirdNumber) {
+            Float maximumNumber;
+
+            if(firstNumber.compareTo(secondNumber)>0 && firstNumber.compareTo(thirdNumber)>0) {
+                maximumNumber = firstNumber;
+            }
+            else if(secondNumber.compareTo(firstNumber)>0 && secondNumber.compareTo(thirdNumber)>0) {
+                maximumNumber = secondNumber;
+            }
+            else {
+                maximumNumber = thirdNumber;
+            }
+
+            logger.info("The maximum number is: " + maximumNumber);
+        }
 
 
     public static void main(String[] args) {
 
         BasicConfigurator.configure();
 
-        logger.info("---Given Three Integers and Finding The Maximum---");
+        logger.info("---Given Three Numbers and Finding The Maximum---");
 
         Integer firstNumber = 15, secondNumber = 20, thirdNumber = 25;
         findMaximum(firstNumber, secondNumber, thirdNumber);
+
+        Float number1 = 36f, number2 = 10f, number3 = 5f;
+        findMaximum(number1, number2, number3);
 
     }
 
